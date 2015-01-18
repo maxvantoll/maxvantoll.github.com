@@ -7,11 +7,59 @@
 	<title>Max VanToll</title>
 
 	<style>
-		body { background: red; }
-		h1 { color: white; }
+		body {
+			background: red;
+			margin: 0;
+		}
+		@-webkit-keyframes spin {
+			0% {
+				-webkit-transform: rotate(0deg) translateY(0);
+			}
+			20% {
+				-webkit-transform: rotate(180deg) translateY(200px);
+			}
+			40% {
+				-webkit-transform: rotate(360deg) translateY(400px);
+			}
+			60% {
+				-webkit-transform: rotate(270deg) translateY(300px);
+			}
+			80% {
+				-webkit-transform: rotate(90deg) translateY(150px);
+			}
+			100% {
+				-webkit-transform: rotate(0deg) translateY(0);
+			}
+		}
+		@keyframes spin {
+			0% {
+				transform: rotate(0deg) translateY(0);
+			}
+			20% {
+				transform: rotate(180deg) translateY(200px);
+			}
+			40% {
+				transform: rotate(360deg) translateY(400px);
+			}
+			60% {
+				transform: rotate(270deg) translateY(300px);
+			}
+			80% {
+				transform: rotate(90deg) translateY(150px);
+			}
+			100% {
+				transform: rotate(0deg) translateY(0);
+			}
+		}
+		img {
+			max-width: 100%;
+			display: block;
+			-webkit-animation: spin 4s infinite linear;
+			animation: spin 4s infinite linear;
+		}
 	</style>
 </head>
 <body>
-	<h1>Max!</h1>
+	<img src="toothless.png">
 </body>
 </html>
